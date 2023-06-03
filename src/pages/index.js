@@ -1,11 +1,12 @@
-function home({users}:any)
+import User from '../component/user'
+function home({users})
 {
   return <><h1>hello dear</h1>{
-    users.map((user:any)=>{
+    users.map((user)=>{
       return (
         <div key={user.id}>
-          <p>{user.name}</p>
-          <p>{user.email}</p>
+          {/* <p>{user.name}</p> */}
+          <User uuser={user}/>
         </div>
       )
     })
